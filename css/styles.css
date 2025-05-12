@@ -1,0 +1,406 @@
+/* Main CSS file with cheerful pastel theme */
+:root {
+    --pastel-blue: #a0d2eb;
+    --pastel-yellow: #fce38a;
+    --pastel-pink: #ffaaa5;
+    --pastel-mint: #c4e3cb;
+    --pastel-lavender: #d0a9e5;
+    --white: #ffffff;
+    --dark-text: #333333;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Nunito', 'Comic Sans MS', sans-serif;
+    background-color: var(--white);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header and Navigation */
+.header {
+    background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-mint));
+    box-shadow: 0 4px 12px var(--shadow);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.nav {
+    background-color: var(--white);
+    box-shadow: 0 4px 12px var(--shadow);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background-color: var(--pastel-yellow);
+    color: var(--dark-text);
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.nav-btn.active {
+    background-color: var(--pastel-pink);
+}
+
+.nav-btn:nth-child(1) {
+    background-color: var(--pastel-blue);
+}
+
+.nav-btn:nth-child(2) {
+    background-color: var(--pastel-pink);
+}
+
+.nav-btn:nth-child(3) {
+    background-color: var(--pastel-mint);
+}
+
+.nav-btn:nth-child(4) {
+    background-color: var(--pastel-yellow);
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+    color: var(--dark-text);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--pastel-blue);
+    color: var(--dark-text);
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.btn-primary {
+    background-color: var(--pastel-blue);
+}
+
+.btn-success {
+    background-color: var(--pastel-mint);
+}
+
+.btn-warning {
+    background-color: var(--pastel-yellow);
+}
+
+.btn-danger {
+    background-color: var(--pastel-pink);
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+#video, #processed-video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Text Output */
+.text-output {
+    background-color: var(--white);
+    border: 2px dashed var(--pastel-blue);
+    border-radius: 15px;
+    padding: 1rem;
+    min-height: 100px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Text Input */
+.text-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid var(--pastel-blue);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.text-input:focus {
+    border-color: var(--pastel-pink);
+    box-shadow: 0 0 8px rgba(255, 170, 165, 0.5);
+}
+
+/* Gesture Display */
+.gesture-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gesture-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.gesture-card:hover {
+    transform: translateY(-5px);
+}
+
+.gesture-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.gesture-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+/* Spelling Bee Game */
+.game-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.word-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--dark-text);
+}
+
+.letter-progress {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.letter-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: var(--pastel-blue);
+    color: var(--dark-text);
+    transition: all 0.3s ease;
+}
+
+.letter-box.correct {
+    background-color: var(--pastel-mint);
+    transform: translateY(-5px);
+}
+
+.letter-box.incorrect {
+    background-color: var(--pastel-pink);
+    transform: translateY(-5px);
+}
+
+.score {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin: 2rem 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--pastel-blue);
+    color: var(--dark-text);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        padding: 0.5rem;
+    }
+    
+    .nav-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .text-output {
+        font-size: 1.2rem;
+    }
+    
+    .word-display {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* Hand Animation Styles */
+.hand-animation {
+    width: 150px;
+    height: 150px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.hand-animation img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.loading-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--pastel-pink);
+    margin: 0 8px;
+    animation: loading-bounce 1.4s infinite ease-in-out both;
+}
+
+.loading-dot:nth-child(1) {
+    background-color: var(--pastel-blue);
+    animation-delay: -0.32s;
+}
+
+.loading-dot:nth-child(2) {
+    background-color: var(--pastel-yellow);
+    animation-delay: -0.16s;
+}
+
+.loading-dot:nth-child(3) {
+    background-color: var(--pastel-mint);
+}
+
+@keyframes loading-bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}

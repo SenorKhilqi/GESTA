@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Ubah bahasa ke Indonesia -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar SIBI - Beranda</title> <!-- Judul diubah -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Pastikan path ini benar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Gaya tambahan spesifik untuk homepage jika perlu */
+        .hero-section { /* Menggantikan .hand-animation.pulse jika Anda tidak punya CSS untuk itu */
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .hero-section .fas.fa-hands-helping { /* Menggunakan ikon yang berbeda, atau sesuaikan */
+            font-size: 6rem; /* Ukuran ikon besar */
+            color: var(--primary-color, #3498db); /* Warna tema */
+            margin-bottom: 1rem;
+            /* Tambahkan animasi pulse jika Anda punya atau ingin membuatnya */
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .feature-cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem; /* Sedikit lebih besar gap */
+            margin: 2rem 0;
+        }
+
+        .feature-card { /* Mengganti .card di dalam .feature-cards-container untuk styling spesifik */
+            width: 280px; /* Sedikit lebih lebar */
+            padding: 1.5rem; /* Padding lebih besar */
+            text-align: center;
+            background-color: #ffffff; /* Pastikan card punya background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow lebih jelas */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        .feature-card .icon-feature {
+            font-size: 3.5rem; /* Ikon fitur lebih besar */
+            margin-bottom: 1rem;
+        }
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3em;
+        }
+        .feature-card p {
+            font-size: 0.95em;
+            color: #555;
+            min-height: 60px; /* Beri tinggi minimal agar card sejajar */
+            margin-bottom: 1.5rem;
+        }
+        .feature-card .btn { /* Styling tombol di dalam card fitur */
+            display: inline-block;
+            width: auto; /* Tombol tidak full width */
+            padding: 10px 25px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-hands"></i> Penerjemah SIBI</h1> <!-- Diubah -->
+    </header>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-btn active"><i class="fas fa-home"></i> Beranda</a> <!-- Tandai sebagai aktif -->
+        <a href="translate-to-text.html" class="nav-btn"><i class="fas fa-camera"></i> Isyarat ke Teks</a>
+        <a href="translate-to-gesture.html" class="nav-btn"><i class="fas fa-keyboard"></i> Teks ke Isyarat</a>
+        <a href="spelling-bee.html" class="nav-btn"><i class="fas fa-gamepad"></i> Eja Kata</a>
+        <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> Tentang</a>
+    </nav>
+
+    <div class="container">
+        <div class="card"> <!-- Card utama untuk Halaman Beranda -->
+            <div class="card-header">
+                <h2>Selamat Datang di Aplikasi Belajar SIBI!</h2> <!-- Diubah -->
+                <p>Cara yang menyenangkan dan interaktif untuk belajar dan menerjemahkan Sistem Isyarat Bahasa Indonesia (SIBI)</p> <!-- Diubah -->
+            </div>
+
+            <div class="hero-section">
+                <!-- Anda bisa mengganti ikon ini dengan gambar atau animasi yang lebih relevan dengan SIBI -->
+                <i class="fas fa-hands-helping"></i> <!-- Contoh ikon lain, atau gunakan ikon tangan dari header -->
+            </div>
+
+            <div class="feature-cards-container">
+                <div class="feature-card">
+                    <i class="fas fa-camera icon-feature" style="color: var(--pastel-blue);"></i>
+                    <h3>Isyarat ke Teks</h3>
+                    <p>Terjemahkan isyarat tangan SIBI Anda menjadi teks secara real-time menggunakan webcam.</p>
+                    <a href="translate-to-text.html" class="btn btn-primary">Coba Sekarang</a>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-keyboard icon-feature" style="color: var(--pastel-pink);"></i>
+                    <h3>Teks ke Isyarat</h3>
+                    <p>Ubah teks menjadi visualisasi isyarat SIBI dan pelajari cara mengisyaratkan kata-kata baru.</p>
+                    <a href="translate-to-gesture.html" class="btn btn-success">Coba Sekarang</a>
+                    <!-- Ganti kelas tombol jika perlu (btn-danger menjadi btn-success atau lainnya) -->
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-gamepad icon-feature" style="color: var(--pastel-mint);"></i>
+                    <h3>Permainan Eja Kata</h3>
+                    <p>Mainkan game edukatif yang seru untuk berlatih dan menguji kemampuan mengeja SIBI Anda.</p>
+                    <a href="spelling-bee.html" class="btn btn-warning">Main Sekarang</a>
+                    <!-- Ganti kelas tombol jika perlu -->
+                </div>
+            </div>
+
+            <div style="text-align: center; padding: 1rem 0 2rem 0;">
+                <p>Siap untuk mulai belajar SIBI dengan cara yang baru dan menarik? Pilih salah satu fitur di atas!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Belajar SIBI | Dibuat dengan <i class="fas fa-heart" style="color: var(--pastel-pink);"></i></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar SIBI - Tentang Aplikasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 1rem;
+            line-height: 1.7;
+        }
+        .about-section h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color, #3498db);
+        }
+        .about-section h3 .fas, .about-section h3 .fab {
+            margin-right: 8px;
+        }
+        .about-section ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+        .about-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .about-section ul li .fas, .about-section ul li .fab {
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+        .feature-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        .feature-box {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color, #2ecc71);
+        }
+        .feature-box h4 {
+            margin-top: 0;
+        }
+        .feature-box h4 .fas {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-hands"></i> Penerjemah SIBI</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Beranda</a>
+        <a href="translate-to-text.html" class="nav-btn"><i class="fas fa-camera"></i> Isyarat ke Teks</a>
+        <a href="translate-to-gesture.html" class="nav-btn"><i class="fas fa-keyboard"></i> Teks ke Isyarat</a>
+        <a href="spelling-bee.html" class="nav-btn"><i class="fas fa-gamepad"></i> Eja Kata</a>
+        <a href="about.html" class="nav-btn active"><i class="fas fa-info-circle"></i> Tentang</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Tentang Aplikasi Belajar SIBI</h2>
+                <p>Pelajari lebih lanjut mengenai proyek ini dan cara kerjanya</p>
+            </div>
+
+            <div class="about-section">
+                <h3><i class="fas fa-question-circle" style="color: var(--pastel-blue);"></i> Apa itu Aplikasi Belajar SIBI?</h3>
+                <p>Aplikasi Belajar SIBI adalah platform web interaktif yang dirancang untuk membantu individu mempelajari dan berlatih Sistem Isyarat Bahasa Indonesia (SIBI). Aplikasi ini menggunakan teknologi computer vision dan machine learning untuk mengenali isyarat tangan secara real-time dan menerjemahkannya menjadi teks, menampilkan visualisasi isyarat dari teks, serta menyediakan permainan edukatif untuk meningkatkan kemampuan mengeja menggunakan SIBI.</p>
+
+                <h3><i class="fas fa-cogs" style="color: var(--pastel-pink);"></i> Bagaimana Cara Kerjanya?</h3>
+                <p>Sistem kami memanfaatkan teknologi berikut yang berjalan langsung di browser Anda:</p>
+                <ul>
+                    <li><i class="fas fa-camera" style="color: var(--pastel-blue);"></i> <strong>Computer Vision (MediaPipe Hands):</strong> Kami menggunakan MediaPipe Hands dari Google untuk mendeteksi dan melacak titik-titik penting (landmark) pada tangan Anda secara real-time melalui webcam (untuk fitur Isyarat ke Teks).</li>
+                    <li><i class="fas fa-brain" style="color: var(--pastel-mint);"></i> <strong>Machine Learning (ONNX.js):</strong> Sebuah model machine learning (Random Forest Classifier) yang telah dilatih sebelumnya digunakan untuk mengenali pola isyarat tangan berdasarkan landmark yang terdeteksi. Model ini berjalan di browser menggunakan ONNX.js.</li>
+                    <li><i class="fas fa-image" style="color: var(--pastel-purple);"></i> <strong>Visualisasi Isyarat:</strong> Untuk fitur Teks ke Isyarat, aplikasi menampilkan gambar atau animasi yang merepresentasikan isyarat SIBI.</li>
+                    <li><i class="fas fa-laptop-code" style="color: var(--pastel-yellow);"></i> <strong>Teknologi Web Standar:</strong> Antarmuka pengguna (frontend) dibangun menggunakan HTML, CSS, dan JavaScript murni.</li>
+                </ul>
+
+                <h3><i class="fas fa-star" style="color: var(--pastel-yellow);"></i> Fitur Utama</h3>
+                <div class="feature-box-container">
+                    <div class="feature-box">
+                        <h4><i class="fas fa-camera"></i> Isyarat ke Teks</h4>
+                        <p>Gunakan webcam Anda untuk menerjemahkan isyarat abjad SIBI menjadi teks secara real-time. Fitur ini sempurna untuk melatih kemampuan Anda dalam melakukan isyarat.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4><i class="fas fa-keyboard"></i> Teks ke Isyarat</h4>
+                        <p>Masukkan teks dan lihat representasi visual dari isyarat SIBI yang sesuai. Sebuah cara yang bagus untuk mempelajari bagaimana melakukan isyarat untuk kata ke isyarat abjad SIBI.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4><i class="fas fa-gamepad"></i> Permainan Eja Kata</h4>
+                        <p>Sebuah permainan edukatif yang menyenangkan untuk menguji dan meningkatkan kemampuan Anda dalam mengeja kata-kata menggunakan isyarat abjad SIBI.</p>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-book" style="color: var(--pastel-mint);"></i> Mengenal SIBI</h3>
+                <p>Sistem Isyarat Bahasa Indonesia (SIBI) adalah salah satu sistem isyarat yang digunakan di Indonesia untuk mendukung komunikasi bagi teman Tuli dan individu dengan hambatan pendengaran. SIBI memiliki struktur dan kosakata tersendiri yang penting untuk dipelajari.</p>
+                <p>Mempelajari SIBI membuka pintu komunikasi yang lebih luas dan inklusif.</p>
+
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://pmpk.kemdikbud.go.id/sibi/" target="_blank" class="btn btn-primary">Pelajari Lebih Lanjut SIBI</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Pengembangan dan Kredit</h2>
+                <p>Informasi mengenai pengembangan proyek ini</p>
+            </div>
+
+            <div class="about-section">
+                <h3><i class="fas fa-code" style="color: var(--pastel-blue);"></i> Detail Teknis</h3>
+                <p>Proyek ini berjalan sepenuhnya di sisi klien (browser pengguna) dan menggunakan:</p>
+                <ul>
+                    <li><i class="fab fa-html5" style="color: #E34F26;"></i> <strong>HTML5, CSS3, JavaScript:</strong> Untuk membangun antarmuka dan logika aplikasi web.</li>
+                    <li><i class="fas fa-microchip" style="color: var(--pastel-yellow);"></i> <strong>MediaPipe Hands (JavaScript):</strong> Untuk deteksi landmark tangan.</li>
+                    <li><i class="fas fa-brain" style="color: var(--pastel-mint);"></i> <strong>ONNX.js:</strong> Untuk menjalankan model machine learning (Random Forest yang dikonversi ke ONNX) di browser.</li>
+                    <li><i class="fas fa-database" style="color: var(--pastel-pink);"></i> <strong>Dataset:</strong> Model dilatih menggunakan dataset gambar isyarat tangan SIBI bersumber dari platform Kaggle.</li>
+                </ul>
+
+                <h3><i class="fas fa-envelope" style="color: var(--pastel-mint);"></i> Kontak</h3>
+                <p style="text-align: center;">Punya pertanyaan atau masukan? Silakan hubungi:</p>
+                <div style="text-align: center;">
+                    <!-- GANTI DENGAN ALAMAT EMAIL KONTAK ANDA -->
+                    <a href="mailto:237006017@student.unsil.ac.id" class="btn btn-warning"><i class="fas fa-envelope"></i> Email Kami</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Belajar SIBI | Dibuat dengan <i class="fas fa-heart" style="color: var(--pastel-pink);"></i></p>
+    </footer>
+
+    <!-- Jika ada JS spesifik untuk halaman 'Tentang', tambahkan di sini -->
+    <!-- <script src="js/about.js"></script> -->
+</body>
+</html>

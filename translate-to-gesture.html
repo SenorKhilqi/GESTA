@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIBI Translator - Text to Gesture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-hands"></i> SIBI Translator</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Beranda</a>
+        <a href="translate-to-text.html" class="nav-btn active"><i class="fas fa-camera"></i> Isyarat ke Teks</a>
+        <a href="translate-to-gesture.html" class="nav-btn"><i class="fas fa-keyboard"></i> Teks ke Isyarat</a>
+        <a href="spelling-bee.html" class="nav-btn"><i class="fas fa-gamepad"></i> Eja Kata</a>
+        <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> Tentang</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Text to Gesture Converter</h2>
+                <p>Convert text into SIBI signs and learn how to sign words</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <label for="text-input" style="font-size: 1.2rem; font-weight: bold;">Enter text to convert:</label>
+                <input type="text" id="text-input" class="text-input" placeholder="Type something here..." maxlength="50">
+                <button id="convert-btn" class="btn btn-primary"><i class="fas fa-sign-language"></i> Show SIBI Gestures</button>
+            </div>
+            
+            <div id="gesture-container" class="gesture-container">
+                <div style="text-align: center; padding: 2rem;">
+                    <p>Enter text above and click "Show SIBI Gestures" to see the signs!</p>
+                </div>
+            </div>
+            
+            <div id="gesture-cards" class="gesture-container" style="display: none;">
+                <!-- Gesture cards will be added here dynamically -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <div id="loading-indicator" class="loading-animation" style="display: none;">
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                </div>
+                <p><i class="fas fa-lightbulb" style="color: var(--pastel-yellow);"></i> Tip: Try typing common words or phrases to see their SIBI representations.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Learn SIBI Alphabet</h2>
+                <p>Click on a letter to see its SIBI sign</p>
+            </div>
+            
+            <div class="gesture-container" id="alphabet-container">
+                <!-- Alphabet buttons will be generated here -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <div id="selected-letter-display" style="display: none;">
+                    <h3 id="selected-letter" style="font-size: 2.5rem;"></h3>
+                    <div style="margin: 1rem 0;">
+                        <img id="selected-letter-image" src="" alt="SIBI sign" style="width: 200px; height: 200px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    <footer class="footer">
+        <p>&copy; 2025 Belajar Sibi | Dibuat dengan <i class="fas fa-heart" style="color: var(--pastel-pink);"></i></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/translate-gesture.js"></script>
+</body>
+</html>
